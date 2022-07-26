@@ -1,0 +1,44 @@
+{
+  "name": "vue3-crm",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dayjs": "^1.11.1",
+    "element-plus": "^2.1.8",
+    "less": "^4.1.2",
+    "mockjs": "^1.1.0",
+    "normalize.css": "^8.0.1",
+    "path": "^0.12.7",
+    "pinia": "^2.0.13",
+    "sass": "^1.50.0",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/pathjs": "^0.8.36",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^7.22.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.8.0",
+    "postcss": "^8.4.12",
+    "prettier": "^1.19.1",
+    "scss": "^0.2.4",
+    "typescript": "^4.5.4",
+    "unplugin-element-plus": "^0.3.4",
+    "unplugin-vue-components": "^0.19.1",
+    "vite": "^2.9.0",
+    "vue-tsc": "^0.29.8"
+  }
+}
