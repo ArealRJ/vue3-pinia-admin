@@ -1,7 +1,8 @@
 import Mock from "mockjs"
 import config from "@/config";
+import { responseType } from "@/@types/interface"
 
-const responseData = (data: any) => {
+const responseData = (data: any): responseType => {
   return {
     code: 200,
     msg: 'ok',
@@ -13,11 +14,11 @@ const responseData = (data: any) => {
 /**
  * @登录
  */
-Mock.mock(config.baseUrl+'/api/user/login', 'post', (options: { body: any }) => {
+Mock.mock(config.baseUrl + '/api/user/login', 'post', (options: { body: any }) => {
   const { username, password } = JSON.parse(options.body)
   if (username === 'admin' && password === "123456") {
     return responseData({ username: username })
   } else {
-    return '登录失败'
+    alert('用户名密码错误')
   }
 })

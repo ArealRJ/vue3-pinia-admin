@@ -1,27 +1,18 @@
 import { defineStore } from "pinia";
-import { IUserInfo, IUserStore, IAccount } from "../types/user";
+import { userInfo } from "@/@types/interface";
 
-const userInfo: IUserInfo = {
-  name: "",
-  age: 0,
-  idCard: "",
-};
 
-const account: IAccount = {
-  userName: "",
-  password: "",
-};
 
 export const useUserStore = defineStore("user", {
-  state: (): IUserStore => ({
-    userInfo: userInfo,
-    account: account,
-    role: [],
+  state: (): userInfo => ({
+    username:'',
+    password:'',
   }),
   getters: {},
   actions: {
-    getUserInfo(params: IUserInfo) {
-      this.userInfo = { ...params }
+    getUserInfo(params: userInfo) {
+      this.username = params.username
+      this.password = params.password
     },
   },
 });

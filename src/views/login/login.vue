@@ -40,12 +40,20 @@
 
 <script setup lang="ts">
 import { reactive, ref } from "vue";
+
 import router from "@/router";
+import allRoutes from "@/router/route";
 import useStore from "@/store/index";
+import { login } from "@/api";
+import localCache from "@/utils/cache"
+import {response} from "@/@types/interface";
+
 import LoginBackground from "./components/loginBackground.vue";
 import LoginForm from "./components/loginFrom.vue";
 
-import { login } from "@/api";
+
+
+
 const { user } = useStore();
 const loginFormRef = ref<InstanceType<typeof LoginForm>>();
 const isLogin = ref(true);
@@ -57,16 +65,19 @@ const account = reactive({
   name:'',
   password:''
 });
-// 登录
+
+/**
+ * @登录事件
+ */
 const handleLoginClick = () => {
-  // console.log(loginFormRef.value);
   loginFormRef.value?.formRef.validate((valid: boolean) => {
     if (valid) {
       login({
         username:account.name,
         password:account.password
-      }).then(res=>{
-        console.log(res);
+      }).then((res:any)=>{
+        user.getUserInfo(res.data)
+        localCache.setCache('routers',JSON.stringify(allRoutes.admin))
         router.push("/main");
         console.log('登陆成功');
       })

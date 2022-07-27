@@ -12,3 +12,16 @@ export interface IRoute {
   },
   children?:IRoute[]
 }
+
+export interface userInfo {
+  username:string,
+  password:string,
+}
+
+
+
+export interface responseType {
+  code:number,
+  msg:string,
+  data:any,
+}
