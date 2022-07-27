@@ -16,14 +16,6 @@
           </template>
           <LoginForm ref="loginFormRef" v-model:account="account" />
         </el-tab-pane>
-        <!-- <el-tab-pane name="register">
-          <template #label>
-            <span class="register-tab">
-              <i class="iconfont">&#xe6d6;</i>&nbsp;&nbsp;注册
-            </span>
-          </template>
-          <RegisterForm />
-        </el-tab-pane> -->
       </el-tabs>
       <div class="account-control">
         <el-checkbox style="color:#000">记住密码</el-checkbox>
@@ -52,7 +44,6 @@ import router from "@/router";
 import useStore from "@/store/index";
 import LoginBackground from "./components/loginBackground.vue";
 import LoginForm from "./components/loginFrom.vue";
-import RegisterForm from "./components/registerForm.vue";
 
 import { login } from "@/api";
 const { user } = useStore();
@@ -78,8 +69,8 @@ const handleLoginClick = () => {
         console.log(res);
       })
       console.log('登陆成功');
-      console.log(account);
-      // router.push("/main");
+      // console.log(account);
+      router.push("/main");
     }
   });
 };
