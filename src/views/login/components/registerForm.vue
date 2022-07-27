@@ -1,11 +1,3 @@
-<!--
- * @Author: Areal
- * @Date: 2022-04-09 11:03
- * @LastEditTime: 2022-06-23 17:16:52
- * @LastEditors: renjie
- * @FilePath: /vue3-crm/src/views/login/components/registerForm.vue
- * @Description: 注册表单
--->
 <template>
   <div>
     <el-form :model="registerInfo" :rules="rules">

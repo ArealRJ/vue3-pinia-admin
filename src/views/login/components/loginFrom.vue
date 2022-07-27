@@ -1,19 +1,3 @@
-<!--
- * @Author: RenJie
- * @Date: 2022-04-11 11:57:23
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-01 10:16:03
- * @FilePath: /vue3-crm/src/views/login/components/loginFrom.vue
- * @Description: 
--->
-<!--
- * @Author: Areal
- * @Date: 2022-04-09 11:03
- * @LastEditTime: 2022-06-23 17:47:27
- * @LastEditors: renjie
- * @FilePath: /vue3-crm/src/views/login/components/loginFrom.vue
- * @Description: 登录表单
--->
 <template>
   <div class="'login">
     <el-form :rules="rules" :model="account" ref="formRef">

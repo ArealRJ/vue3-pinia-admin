@@ -1,12 +1,3 @@
-/*
- * @Author: RenJie
- * @Date: 2022-06-01 09:03:23
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-03 22:55:04
- * @FilePath: /vue3-crm/src/store/modules/user.ts
- * @Description: 
- */
-
 import { defineStore } from "pinia";
 import { IUserInfo, IUserStore, IAccount } from "../types/user";
 

@@ -1,11 +1,3 @@
-<!--
- * @Author: Areal
- * @Date: 2022-04-09 11:03
- * @LastEditTime: 2022-06-24 09:00:11
- * @LastEditors: renjie
- * @FilePath: /vue3-crm/src/views/login/login.vue
- * @Description: 登录
--->
 <template>
   <div class="login">
     <LoginBackground />

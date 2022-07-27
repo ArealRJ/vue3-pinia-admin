@@ -13,7 +13,7 @@ const responseData = (data: any) => {
 /**
  * @登录
  */
-Mock.mock('http://localhost:3000/api/user/login', 'post', (options: { body: any }) => {
+Mock.mock(config.baseUrl+'/api/user/login', 'post', (options: { body: any }) => {
   const { username, password } = JSON.parse(options.body)
   if (username === 'admin' && password === "123456") {
     return responseData({ username: username })

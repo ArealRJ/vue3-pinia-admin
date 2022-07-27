@@ -1,11 +1,3 @@
-/*
- * @Author: Areal
- * @Date: 2022-04-09 11:03:19
- * @LastEditTime: 2022-04-09 12:40:49
- * @LastEditors: Areal
- * @FilePath: \vue3-crm\src\service\request\index.ts
- * @Description:网络请求
- */
 import axios from 'axios'
 import type { AxiosInstance } from 'axios'
 import type { MyRequestInterceptors, MyRequestConfig } from './type'

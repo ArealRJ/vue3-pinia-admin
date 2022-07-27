@@ -1,11 +1,3 @@
-<!--
- * @Author: RenJie
- * @Date: 2022-04-19 10:17:32
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-01 11:21:14
- * @FilePath: /vue3-crm/src/layout/index.vue
- * @Description: 
--->
 <template>
   <div class="layout">
     <el-container class="main">

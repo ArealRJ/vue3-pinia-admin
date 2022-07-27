@@ -1,11 +1,3 @@
-<!--
- * @Author: Areal
- * @Date: 2022-04-09 11:03
- * @LastEditTime: 2021-4-09 11:03
- * @LastEditors: Areal
- * @FilePath: \vue3-crm\src\views\login/components/loginBackground.vue
- * @Description: 登录页背景
--->
 <template>
   <div class="index-bg">
     <div class="stars">

@@ -1,19 +1,3 @@
-<!--
- * @Author: RenJie
- * @Date: 2022-05-25 21:19:35
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-01 14:28:15
- * @FilePath: /vue3-crm/src/components/myMenu/index.vue
- * @Description: 
--->
-<!--
- * @Author: RenJie
- * @Date: 2022-05-25 21:19:35
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-01 10:18:43
- * @FilePath: /vue3-crm/src/components/myMenu/menu.vue
- * @Description: 
--->
 <template>
   <div>
     <el-col :span="12">
@@ -61,7 +45,7 @@ export default defineComponent({
     const routsList = routes.admin;
     const menuList = getMenuDataFromRouter(routsList);
     console.log(menuList);
-    const handleItemClick = (item) => {};
+    const handleItemClick = (item: any) => {};
     return {
       menuList,
       handleItemClick,

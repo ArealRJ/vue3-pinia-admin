@@ -1,11 +1,3 @@
-/*
- * @Author: RenJie
- * @Date: 2022-04-11 10:21:45
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-01 09:30:41
- * @FilePath: /vue3-crm/src/service/index.ts
- * @Description: 
- */
 // service统一出口
 import MyRequest from './request'
 import { BASE_URL, TIME_OUT } from './request/config'
