@@ -67,10 +67,10 @@ const handleLoginClick = () => {
         password:account.password
       }).then(res=>{
         console.log(res);
+        router.push("/main");
+        console.log('登陆成功');
       })
-      console.log('登陆成功');
       // console.log(account);
-      router.push("/main");
     }
   });
 };

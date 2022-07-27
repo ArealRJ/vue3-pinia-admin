@@ -1,11 +1,3 @@
-/*
- * @Author: RenJie
- * @Date: 2022-05-25 19:54:07
- * @LastEditors: RenJie
- * @LastEditTime: 2022-07-01 14:29:01
- * @FilePath: /vue3-crm/src/router/route.ts
- * @Description: 
- */
 import { RouterView } from 'vue-router'
 import { RouteRecordRaw } from "vue-router";
 import { IRoute } from "@/@types/interface"
