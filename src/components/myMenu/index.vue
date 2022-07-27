@@ -42,7 +42,7 @@ import routes from "@/router/route";
 export default defineComponent({
   setup() {
     // console.log(routes);
-    const routsList = routes.admin;
+    const routsList = routes;
     const menuList = getMenuDataFromRouter(routsList);
     console.log(menuList);
     const handleItemClick = (item: any) => {};

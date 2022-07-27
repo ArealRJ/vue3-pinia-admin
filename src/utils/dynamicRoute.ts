@@ -4,7 +4,7 @@ import allRoutes from '@/router/route'
 
 export function roleMapRoutes(role:string){
   if(role==='admin'){
-    return allRoutes.admin 
+    return allRoutes 
   }
   if(role==='user'){
     return ;

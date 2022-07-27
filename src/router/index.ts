@@ -29,11 +29,13 @@ const router = createRouter({
 })
 
 // router.beforeEach((to, from, next) => {
-//   if(to.path ==='/login'){
-//     next()
-//   }
-//   // console.log(to.path);
-//   // next()
+  // if (to.path !== '/login') {
+  //   next()
+  // }
+  // if (to.path === '/main') {
+  //   console.log(firstRoute)
+  //   return firstRoute?.path
+  // }
 // })
 
 

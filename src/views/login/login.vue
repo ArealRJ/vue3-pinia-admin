@@ -78,7 +78,7 @@ const handleLoginClick = () => {
         user.getUserInfo(res.data);
         localCache.setCache("routers", JSON.stringify(adminRoutes));
         router.addRoute(makeBaseRoute(adminRoutes));
-        router.push("/main");
+        router.push('/main')
         console.log("登陆成功");
       });
       // console.log(account);
