@@ -17,6 +17,6 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 
 ## start project
-  1.yarn 
-  2.yarn dev
-  3.yarn build
+### 1.yarn 
+### 2.yarn dev
+### 3.yarn build
