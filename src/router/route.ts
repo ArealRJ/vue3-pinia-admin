@@ -1,7 +1,6 @@
 import { RouterView } from 'vue-router'
-import { RouteRecordRaw } from "vue-router";
-import { IRoute } from "@/@types/interface"
-const adminRoutes: IRoute[] = [
+import { RouterInterface } from "@/@types/interface"
+const adminRoutes: Array<RouterInterface> = [
   {
     path: '/home',
     component: RouterView,
@@ -39,8 +38,16 @@ const adminRoutes: IRoute[] = [
   },
 ]
 
-const allRoutes = {
-  admin: adminRoutes,
+
+
+export const makeBaseRoute = (routes: RouterInterface[] = adminRoutes):any => {
+  return {
+    path: '/',
+    components:()=>import("@/layout/index.vue"),
+    redirect: routes[0].path,
+    children: routes
+  }
 }
 
-export default allRoutes
+
+export default adminRoutes

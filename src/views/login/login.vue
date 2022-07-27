@@ -42,15 +42,14 @@
 import { reactive, ref } from "vue";
 
 import router from "@/router";
-import allRoutes from "@/router/route";
+import adminRoutes from "@/router/route";
 import useStore from "@/store/index";
 import { login } from "@/api";
-import localCache from "@/utils/cache"
-import {response} from "@/@types/interface";
+import localCache from "@/utils/cache";
+import { makeBaseRoute } from "@/router/route";
 
 import LoginBackground from "./components/loginBackground.vue";
 import LoginForm from "./components/loginFrom.vue";
-
 
 
 
@@ -62,8 +61,8 @@ const handleTabChange = () => {
   isLogin.value = !isLogin.value;
 };
 const account = reactive({
-  name:'',
-  password:''
+  name: "",
+  password: "",
 });
 
 /**
@@ -73,14 +72,15 @@ const handleLoginClick = () => {
   loginFormRef.value?.formRef.validate((valid: boolean) => {
     if (valid) {
       login({
-        username:account.name,
-        password:account.password
-      }).then((res:any)=>{
-        user.getUserInfo(res.data)
-        localCache.setCache('routers',JSON.stringify(allRoutes.admin))
+        username: account.name,
+        password: account.password,
+      }).then((res: any) => {
+        user.getUserInfo(res.data);
+        localCache.setCache("routers", JSON.stringify(adminRoutes));
+        router.addRoute(makeBaseRoute(adminRoutes));
         router.push("/main");
-        console.log('登陆成功');
-      })
+        console.log("登陆成功");
+      });
       // console.log(account);
     }
   });

@@ -1,27 +1,27 @@
-
+import { RawRouteComponent } from "vue-router"
 /* 定义全局类型接口 */
 
-export interface IRoute {
-  path:string,
-  name?:string,
-  component: any,
-  type?:number,
-  meta:{
-    title:string,
-    key:string,
-  },
-  children?:IRoute[]
+export interface RouterInterface {
+  path: string;
+  name?: string;
+  component: RawRouteComponent;
+  meta: {
+    title: string;
+    key: string;
+    noShow?: boolean;
+  };
+  children?: RouterInterface[];
 }
 
 export interface userInfo {
-  username:string,
-  password:string,
+  username: string,
+  password: string,
 }
 
 
 
 export interface responseType {
-  code:number,
-  msg:string,
-  data:any,
+  code: number,
+  msg: string,
+  data: any,
 }
