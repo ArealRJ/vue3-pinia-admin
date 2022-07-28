@@ -8,6 +8,7 @@ export interface RouterInterface {
   meta: {
     title: string;
     key: string;
+    icon:string,
     noShow?: boolean;
   };
   children?: RouterInterface[];
@@ -25,3 +26,5 @@ export interface responseType {
   msg: string,
   data: any,
 }
+
+export type sideBarStatus = "Fold" | "Expand";

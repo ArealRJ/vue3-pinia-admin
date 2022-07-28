@@ -1,17 +1,16 @@
 <template>
   <div class="layout">
     <el-container class="main">
-      <el-aside class="page-left" width="200px">
-        <div class="logo">
-          <img class="logoImg" src="../assets/imgs/logo.png" alt="" />
-          <span class="title text-xl font-bold">vue3-crm</span>
-        </div>
-        <div class="menu center">
+      <el-aside
+        class="page-left"
+        :width="foldStatus == 'Fold' ? '200px' : '50px'"
+      >
+        <div class="menu">
           <MyMenu></MyMenu>
         </div>
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header><MyHeader @foldChange="handleFoldChange"/></el-header>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
@@ -19,43 +18,38 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue";
 
-import { defineComponent } from "vue";
+import type {sideBarStatus} from "@/@types/interface"
+
 import MyMenu from "@/components/myMenu/index.vue";
-// console.log(menu);
+import MyHeader from "@/components/myHeader/index.vue";
 
-
+const foldStatus = ref<sideBarStatus>("Fold");
+/**
+ * @menu状态改变
+ */
+const handleFoldChange = (value: sideBarStatus) => {
+  foldStatus.value = value;
+};
 </script>
-
-
 
 <style scoped lang="scss">
 @import "../assets/style/element.scss";
 .layout {
   width: 100%;
   height: 100%;
-  .main{
-    height:100%;
+  .main {
+    height: 100%;
     .page-left {
-    // height: 100%;
-    // background-color;
-    background-color: rgba(156, 163, 175);
-    // height:100%;
-    .logo {
-      margin-top: 20px;
-      display: flex;
-      height: 28px;
-      padding: 12px 10px 8px 10px;
-      flex-direction: row;
-      // justify-content: flex-start;
-      align-items: center;
-      .logoImg {
-        width: 44px;
-        height: 44px;
-      }
+      // height: 100%;
+      // background-color;
+      background-color: rgba(156, 163, 175);
+      // height:100%;
     }
   }
-  }
-  
+}
+.el-aside {
+  transition: width 0.3s linear;
 }
 </style>

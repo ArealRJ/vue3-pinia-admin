@@ -1,12 +1,20 @@
 :deep(.el-menu){
-  background-color: #9ca3af;
-  border: none;
-  color:#fff;
-  .el-sub-menu__title{
+  .el-sub-menu{
     width: 200px;
   }
+  .el-sub-menu__title,
   .el-menu-item{
     width: 200px;
+    padding-left: 20px; color: rgb(18, 22, 28); background-color: rgb(94, 106, 123);
+  }
+  .is-active{
+    color:rgb(31, 127, 236)
+  }
+  .el-sub-menu__icon-arrow{
+    width: 20px;
   }
 }
 
+.el-aside{
+  overflow-x:hidden; 
+}

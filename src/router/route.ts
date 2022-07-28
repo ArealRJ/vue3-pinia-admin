@@ -6,18 +6,9 @@ const adminRoutes: Array<RouterInterface> = [
     component: RouterView,
     meta: {
       title: '综合统计',
-      key: 'home'
+      key: 'home',
+      icon:'HomeFilled'
     },
-    children: [
-      {
-        path: '/',
-        component: () => import("@/views/main/dataCenter/index.vue"),
-        meta: {
-          title: '数据管理',
-          key: 'dataManage'
-        }
-      }
-    ]
   },
   {
     path: '/user',
@@ -25,25 +16,37 @@ const adminRoutes: Array<RouterInterface> = [
     meta: {
       title: '用户管理',
       key: 'user',
+      icon:'UserFilled'
     },
-    children: [
-      {
-        path: '/',
-        component: () => import("@/views/main/user/member.vue"),
-        meta: {
-          title: '成员管理',
-          key: 'memberManage'
-        },
-      }]
   },
+  {
+    path:'/form',
+    component: RouterView,
+    meta:{
+      title:'表单管理',
+      key:'form',
+      icon:'Histogram'
+    },
+    children:[
+      {
+      path:'/',
+      component:RouterView,
+      meta:{
+        title:'人员信息',
+        key:'form-user',
+        icon:'UserOutlined'
+      }
+      }
+  ]
+  }
 ]
 
 
 
-export const makeBaseRoute = (routes: RouterInterface[] = adminRoutes):any => {
+export const makeBaseRoute = (routes: RouterInterface[] = adminRoutes): any => {
   return {
     path: '/',
-    components:()=>import("@/layout/index.vue"),
+    components: () => import("@/layout/index.vue"),
     redirect: routes[0].path,
     children: routes
   }
