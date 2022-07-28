@@ -6,3 +6,9 @@ export const login = async (params:any) => {
     data:params
   })
 }
+
+export const getUserInfo = async()=>{
+  return await Axios.get({
+    url:'/api/user/info',
+  })
+}

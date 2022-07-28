@@ -1,9 +1,9 @@
 import { RouterView } from 'vue-router'
 import { RouterInterface } from "@/@types/interface"
-const adminRoutes: Array<RouterInterface> = [
+export const myRoutes: Array<RouterInterface> = [
   {
     path: '/home',
-    component: RouterView,
+    component: ()=>import('@/views/Home.vue'),
     meta: {
       title: '综合统计',
       key: 'home',
@@ -43,9 +43,12 @@ const adminRoutes: Array<RouterInterface> = [
 
 
 
-export const makeBaseRoute = (routes: RouterInterface[] = adminRoutes): any => {
+
+
+export const makeBaseRoute = (routes: RouterInterface[] = myRoutes): any => {
   return {
     path: '/',
+    name:'home',
     components: () => import("@/layout/index.vue"),
     redirect: routes[0].path,
     children: routes
@@ -53,4 +56,4 @@ export const makeBaseRoute = (routes: RouterInterface[] = adminRoutes): any => {
 }
 
 
-export default adminRoutes
+export default myRoutes

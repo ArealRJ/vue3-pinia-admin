@@ -1,10 +1,10 @@
 :deep(.el-menu){
   .el-sub-menu{
-    width: 200px;
+    width: 100%px;
   }
   .el-sub-menu__title,
   .el-menu-item{
-    width: 200px;
+    width: 100%px;
     padding-left: 20px; color: rgb(18, 22, 28); background-color: rgb(94, 106, 123);
   }
   .is-active{
@@ -17,4 +17,9 @@
 
 .el-aside{
   overflow-x:hidden; 
+}
+
+.el-main {
+  padding: 0;
+  margin: 0;
 }

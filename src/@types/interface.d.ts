@@ -17,6 +17,7 @@ export interface RouterInterface {
 export interface userInfo {
   username: string,
   password: string,
+  avatar:string
 }
 
 
@@ -28,3 +29,10 @@ export interface responseType {
 }
 
 export type sideBarStatus = "Fold" | "Expand";
+
+
+interface tag {
+  name: string,
+  path: string,
+  title?:string
+}

@@ -1,9 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import { makeBaseRoute } from "./route";
 import { RouteRecordRaw } from "vue-router";
+import { FromKeyMakeRoute } from "@/utils";
+import localCache from "@/utils/cache"
 
 const routes: RouteRecordRaw[] = [
   {
-    path: "/",
+    path: "/homeIndex",
     redirect: "/login",
   },
   {
@@ -12,31 +15,28 @@ const routes: RouteRecordRaw[] = [
     component: () => import("@/views/login/login.vue"),
   },
   {
-    path: '/main',
-    name: 'main',
-    component: () => import("@/layout/index.vue"),
-  },
-  {
     path: "/:pathMatch(.*)*",
     name: 'not-found',
     component: () => import("@/views/not-found.vue"),
   }
 ];
 
+
+const getRoutes = (): any => {
+  const routesArr: any = localCache.getCache("routers");
+  if (routesArr) {
+    const routeobj = routes.slice(1, routes.length);
+    routeobj.push(makeBaseRoute(FromKeyMakeRoute(routesArr)));
+    return routeobj;
+  } else {
+    return routes;
+  }
+};
+
 const router = createRouter({
-  routes,
+  routes:getRoutes(),
   history: createWebHashHistory()
 })
-
-// router.beforeEach((to, from, next) => {
-  // if (to.path !== '/login') {
-  //   next()
-  // }
-  // if (to.path === '/main') {
-  //   console.log(firstRoute)
-  //   return firstRoute?.path
-  // }
-// })
 
 
 export default router

@@ -23,9 +23,23 @@ body {
   margin: 0;
 }
 
+ul{
+  list-style-type: none;
+  margin:5px auto;
+  list-style-position: inside;
+  margin-left: 0px;
+  }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
 }

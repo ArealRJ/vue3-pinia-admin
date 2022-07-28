@@ -3,10 +3,11 @@ import { userInfo } from "@/@types/interface";
 
 
 
-export const useUserStore = defineStore("user", {
+const useUserStore = defineStore("user", {
   state: (): userInfo => ({
     username:'',
     password:'',
+    avatar:"",
   }),
   getters: {},
   actions: {
@@ -14,5 +15,11 @@ export const useUserStore = defineStore("user", {
       this.username = params.username
       this.password = params.password
     },
+    setAvatar(params: string) {
+      this.avatar = params
+    }
   },
 });
+
+
+export default useUserStore;

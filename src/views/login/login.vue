@@ -42,7 +42,9 @@
 import { reactive, ref } from "vue";
 
 import router from "@/router";
-import adminRoutes from "@/router/route";
+import useRoute from "vue-router";
+import routes from "@/router/index";
+import myRoutes from "@/router/route";
 import useStore from "@/store/index";
 import { login } from "@/api";
 import localCache from "@/utils/cache";
@@ -76,9 +78,12 @@ const handleLoginClick = () => {
         password: account.password,
       }).then((res: any) => {
         user.getUserInfo(res.data);
-        localCache.setCache("routers", JSON.stringify(adminRoutes));
-        router.addRoute(makeBaseRoute(adminRoutes));
-        router.push('/main')
+        // router.removeRoute('/login');
+        localCache.setCache("routers", JSON.stringify(myRoutes));
+        console.log(makeBaseRoute(myRoutes));
+        router.addRoute(makeBaseRoute(myRoutes));
+        console.log(router.options.routes);
+        router.push('/home')
         console.log("登陆成功");
       });
       // console.log(account);

@@ -35,9 +35,10 @@ export default ({ mode }: {
     ],
     // base:loadEnv(mode, process.cwd()).VITE_APP_NAME,
     server: {
-      port: 3010,
-      host: '0.0.0.0',
+      port: 3000,
+      host: 'localhost',
       open: false, //不打开浏览器
+      hmr: true, //开启热更新
       // proxy: {
       //   '/api': {
       //     target: userConfig.baseurl,
