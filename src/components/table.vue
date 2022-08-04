@@ -1,13 +1,13 @@
 <template>
   <div class="my-table">
-    <div class="header">
+    <!-- <div class="header">
       <slot name="header">
         <div class="title">{{ title }}</div>
         <div class="handler">
           <slot name="header-handler"></slot>
         </div>
       </slot>
-    </div>
+    </div> -->
     <el-table
       :data="tableList"
       border

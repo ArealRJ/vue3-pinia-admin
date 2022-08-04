@@ -29,9 +29,10 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from "vue";
+import { onMounted, reactive,ref } from "vue";
 import SearchForm from "@/components/searchForm.vue";
 import Table from "@/components/table.vue";
+import {getUserPage} from "@/api"
 
 const formData = reactive({
   vague: undefined,
@@ -75,50 +76,18 @@ const columnList = [
     minWidth: "120",
   },
 ];
-const tableList = reactive([
-  {
-    name: "张三",
-    realname: "张三",
-    cellphone: "13888888888",
-    enable: "启用",
-    createAt: "2020-01-01",
-    updateAt: "2020-01-01",
-  },
-  {
-    name: "张三",
-    realname: "张三",
-    cellphone: "13888888888",
-    enable: "启用",
-    createAt: "2020-01-01",
-    updateAt: "2020-01-01",
-  },
-  {
-    name: "张三",
-    realname: "张三",
-    cellphone: "13888888888",
-    enable: "启用",
-    createAt: "2020-01-01",
-    updateAt: "2020-01-01",
-  },
-  {
-    name: "张三",
-    realname: "张三",
-    cellphone: "13888888888",
-    enable: "启用",
-    createAt: "2020-01-01",
-    updateAt: "2020-01-01",
-  },
-]);
-// const columnList = {
-//   // 自定义表头
-//   propsList:
-//   // 是否显示indexColumn
-//   showIndexProp: true,
-//   // 是否显示selectColumn
-//   showSelectColumn: true,
-//   // header插槽 title
-//   title: "用户列表",
-// };
+  /**
+   * @表格数据
+   */
+  let tableList = ref([]);
+  const getData = ()=>{
+    getUserPage().then((res:any)=>{
+    tableList.value = res.userList
+  })
+  }
+  onMounted(()=>{
+    getData()
+  })
 </script>
 
 <style scoped lang="scss">
@@ -126,7 +95,8 @@ const tableList = reactive([
 width: 98%;
 
 .operation{
-  color:cornflowerblue
+  color:cornflowerblue;
+  cursor: pointer;
 }
 }
 

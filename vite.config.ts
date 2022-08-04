@@ -24,7 +24,8 @@ export default ({ mode }: {
   const userConfig = constructConfig(mode != "dev");
   return defineConfig({
     plugins: [
-      vue(),
+      vue(
+      ),
       ElementPlus({
         // importStyle: "scss",
         useSource: true,

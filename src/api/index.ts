@@ -12,3 +12,10 @@ export const getUserInfo = async()=>{
     url:'/api/user/info',
   })
 }
+
+
+export const getUserPage = async () => {
+  return await Axios.get({
+    url:'/api/user/page'
+  })
+}

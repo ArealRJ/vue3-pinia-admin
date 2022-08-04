@@ -34,3 +34,23 @@ Mock.mock("http://localhost:3000/api/user/info", 'get', (options: { body: any })
   }
   return responseData(data)
 })
+
+/**
+ * @用户管理表格
+ */
+
+Mock.mock("http://localhost:3000/api/user/page",'get',(options:{body:any})=>{
+  return Mock.mock({
+    "userList|10": [
+      {
+        "id|+1": 1,
+        "name": "@word",
+        "realname": "@cname",
+        "enable":'@boolean',
+        "createAt": "@datetime",
+        "updateAt": "@datetime",
+        "cellphone": /^1[3456789]\d{9}$/,
+      }
+    ]
+  })
+})
