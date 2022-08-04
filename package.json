@@ -9,10 +9,11 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "dayjs": "^1.11.1",
+    "dayjs": "^1.11.4",
     "element-plus": "^2.1.8",
     "less": "^4.1.2",
     "mockjs": "^1.1.0",
+    "mpvue-calendar": "^3.0.1",
     "normalize.css": "^8.0.1",
     "path": "^0.12.7",
     "pinia": "^2.0.13",

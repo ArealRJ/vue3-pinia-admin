@@ -723,6 +723,11 @@ copy-anything@^2.0.1:
   dependencies:
     is-what "^3.14.1"
 
+core-js@^3.6.5:
+  version "3.24.0"
+  resolved "https://registry.npmmirror.com/core-js/-/core-js-3.24.0.tgz#4928d4e99c593a234eb1a1f9abd3122b04d3ac57"
+  integrity sha512-IeOyT8A6iK37Ep4kZDD423mpi6JfPRoPUdQwEWYiGolvn4o6j2diaRzNfDfpTdu3a5qMbrGUzKUpYpRY8jXCkQ==
+
 cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -737,7 +742,7 @@ csstype@^2.6.8:
   resolved "https://registry.npmmirror.com/csstype/-/csstype-2.6.20.tgz#9229c65ea0b260cf4d3d997cb06288e36a8d6dda"
   integrity sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==
 
-dayjs@^1.11.1, dayjs@^1.11.3:
+dayjs@^1.11.3, dayjs@^1.11.4:
   version "1.11.4"
   resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.4.tgz#3b3c10ca378140d8917e06ebc13a4922af4f433e"
   integrity sha512-Zj/lPM5hOvQ1Bf7uAvewDaUcsJoI6JmNqmHhHl3nyumwe0XHwt8sWdOVAPACJzCebL8gQCi+K49w7iKWnGwX9g==
@@ -1678,6 +1683,14 @@ mockjs@^1.1.0:
   dependencies:
     commander "*"
 
+mpvue-calendar@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmmirror.com/mpvue-calendar/-/mpvue-calendar-3.0.1.tgz#18ddc1f2f853a90b9d1a00f387f6e04a23dd37f0"
+  integrity sha512-dxa+RhxSc3CCo6O/icYN4MsD7+Ml0QF+ZPHorY/qYX0rLFtomT6/ljGsJC0UbdubE1jeDi9CTJHQceX+VdvRtg==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^3.0.0"
+
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
@@ -2499,7 +2512,7 @@ vue-tsc@^0.29.8:
     "@volar/shared" "0.29.8"
     vscode-vue-languageservice "0.29.8"
 
-vue@^3.2.25:
+vue@^3.0.0, vue@^3.2.25:
   version "3.2.37"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.2.37.tgz#da220ccb618d78579d25b06c7c21498ca4e5452e"
   integrity sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ==

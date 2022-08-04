@@ -36,3 +36,19 @@ interface tag {
   path: string,
   title?:string
 }
+
+export interface selectOption {
+  value:any,
+  label:string
+}
+
+export interface formItem {
+  type: string;
+  options?:selectOption[] 
+  field?: string;
+  placeholder?: string;
+  styleObj?:Object
+  className?: string;
+  labelInValue?: boolean;
+  format?: string;
+}

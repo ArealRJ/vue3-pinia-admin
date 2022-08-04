@@ -13,8 +13,8 @@
         <el-header class="header"><my-header @foldChange="handleFoldChange"/></el-header>
         <el-main>
           <div><myTag /></div>
-          <div>
-            <router-view></router-view>
+          <div class="page-content">
+            <router-view />
           </div>
         </el-main>
       </el-container>
@@ -44,6 +44,9 @@ const handleFoldChange = (value: sideBarStatus) => {
   }
   foldStatus.value = value;
 };
+
+
+
 </script>
 
 <style scoped lang="scss">
@@ -63,6 +66,9 @@ const handleFoldChange = (value: sideBarStatus) => {
       .header{
           background-color: #1881ff;
           height: 70px;
+      }
+      .page-content{
+        height: 700px;
       }
     }
   }

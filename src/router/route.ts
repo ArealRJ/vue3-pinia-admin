@@ -3,7 +3,7 @@ import { RouterInterface } from "@/@types/interface"
 export const myRoutes: Array<RouterInterface> = [
   {
     path: '/home',
-    component: ()=>import('@/views/Home.vue'),
+    component: ()=>import('@/views/home.vue'),
     meta: {
       title: '综合统计',
       key: 'home',
@@ -12,7 +12,7 @@ export const myRoutes: Array<RouterInterface> = [
   },
   {
     path: '/user',
-    component: RouterView,
+    component: ()=>import("@/views/user.vue"),
     meta: {
       title: '用户管理',
       key: 'user',
@@ -49,7 +49,7 @@ export const makeBaseRoute = (routes: RouterInterface[] = myRoutes): any => {
   return {
     path: '/',
     name:'home',
-    components: () => import("@/layout/index.vue"),
+    component: () => import("../layout/index.vue"),
     redirect: routes[0].path,
     children: routes
   }

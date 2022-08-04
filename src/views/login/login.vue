@@ -83,7 +83,7 @@ const handleLoginClick = () => {
         console.log(makeBaseRoute(myRoutes));
         router.addRoute(makeBaseRoute(myRoutes));
         console.log(router.options.routes);
-        router.push('/home')
+        router.push('/main')
         console.log("登陆成功");
       });
       // console.log(account);

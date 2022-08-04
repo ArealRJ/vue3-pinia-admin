@@ -11,3 +11,5 @@ declare module '*.json'
 declare module '@'
 
 declare module "mockjs"
+
+declare module "mpvue-calendar"
